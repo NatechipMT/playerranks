@@ -9,7 +9,7 @@ minetest.register_node("playerranks:2ndexpensive_block", {
 })
 -- 2nd Most Expensive Block Craft
 minetest.register_craft({
-	output = "playerranks:2ndexpensiveblock",
+	output = "playerranks:2ndexpensive_block",
 	recipe = {
 		{"default:diamondblock", "default:diamondblock","default:diamondblock"},
 		{"default:diamondblock", "default:diamondblock","default:diamondblock"},
@@ -28,7 +28,7 @@ minetest.register_node("playerranks:1stexpensive_block", {
 })
 -- 1st Most Expensive Block Craft
 minetest.register_craft({
-	output = "playerranks:1stexpensiveblock",
+	output = "playerranks:1stexpensive_block",
 	recipe = {
 		{"playerranks:2ndexpensive_block", "playerranks:2ndexpensive_block","playerranks:2ndexpensive_block"},
 		{"playerranks:2ndexpensive_block", "playerranks:2ndexpensive_block","playerranks:2ndexpensive_block"},
