@@ -1,4 +1,4 @@
-# playerranks | Refined by Natechip
+# playerranks | refined by Natechip
 Mod for Minetest that allows players to be ranked based on what they have done in the world.
 # Dependencies
 default
