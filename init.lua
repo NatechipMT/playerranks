@@ -11,6 +11,8 @@ minetest.register_privilege("pr_experience", {description = "Experience Priv.", 
 minetest.register_privilege("pr_specialist", {description = "Specialist Priv.", give_to_singleplayer = false})
 minetest.register_privilege("pr_expert", {description = "Expert Priv.", give_to_singleplayer = false})
 minetest.register_privilege("pr_boss", {description = "Boss Priv.", give_to_singleplayer = false})
+minetest.register_privilege("pr_staff", {description = "Staff Priv.", give_to_singleplayer = false})
+minetest.register_privilege("pr_owner", {description = "Owner Priv.", give_to_singleplayer = false})
 
 
 -- playerranks
