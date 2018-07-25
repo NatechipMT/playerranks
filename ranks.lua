@@ -2,17 +2,16 @@
 
 -- 2nd Most Expensive Block
 minetest.register_node("playerranks:2ndexpensive_block", {
-	description = "2nd Most Expensive Block -- Unbreakable, when placed can't be picked back up",
+	description = "2nd Most Expensive Block -- Drops 25 diamonds when digged",
 	tiles = {"2ndexpensive_block.jpg"}, 
-	groups = {unbreakable=1},
+	groups = {cracky=3},
+	drop = "default:diamond 25",
 	sounds = default.node_sound_wood_defaults(),	
 })
 -- 2nd Most Expensive Block Craft
 minetest.register_craft({
 	output = "playerranks:2ndexpensive_block",
 	recipe = {
-		{"default:diamondblock", "default:diamondblock","default:diamondblock"},
-		{"default:diamondblock", "default:diamondblock","default:diamondblock"},
 		{"default:diamondblock", "default:diamondblock", "default:diamondblock"}
 	}
 })
@@ -20,19 +19,19 @@ minetest.register_craft({
 
 -- 1st Most Expensive Block
 minetest.register_node("playerranks:1stexpensive_block", {
-	description = "1st Most Expensive Block -- Unbreakable, when placed can't be picked back up",
+	description = "1st Most Expensive Block -- Drops 40 diamonds and 4 mese when broken digged",
 	tiles = {"1stexpensive_block.jpg"}, 
-	--drop = "playerranks:2ndexpensive_block",
-	groups = {unbreakable=1},
+	groups = {cracky=3},
+	drop = "default:diamond 40, default:mese 4"
 	sounds = default.node_sound_wood_defaults(),	
 })
 -- 1st Most Expensive Block Craft
 minetest.register_craft({
 	output = "playerranks:1stexpensive_block",
 	recipe = {
-		{"playerranks:2ndexpensive_block", "playerranks:2ndexpensive_block","playerranks:2ndexpensive_block"},
-		{"playerranks:2ndexpensive_block", "playerranks:2ndexpensive_block","playerranks:2ndexpensive_block"},
-		{"playerranks:2ndexpensive_block", "playerranks:2ndexpensive_block", "playerranks:2ndexpensive_block"}
+		{"default:mese", "default:diamondblock","default:mese"},
+		{"default:diamondblock", "default:mese","default:diamondblock"},
+		{"default:mese", "default:diamondblock", "default:mese"}
 	}
 })
 
@@ -109,7 +108,7 @@ minetest.override_item("playerranks:1stexpensive_block", {
       if privs.pr_expert then
          privs.pr_boss = true
          privs.pr_expert = nil
-         privs.fly = true
+         privs.fly = true -- Gives fly, can be changed to any priv 
          minetest.set_player_privs(player_name, privs)
          core.chat_send_all("*** Congragulations " .. player_name .. "! You have reached Level 6 -- Boss! You can now fly! Type /ranks for more info! ***")
 		 core.chat_send_player(player_name, '***You can now fly!***')
