@@ -19,10 +19,10 @@ minetest.register_craft({
 
 -- 1st Most Expensive Block
 minetest.register_node("playerranks:1stexpensive_block", {
-	description = "1st Most Expensive Block -- Drops 40 diamonds and 4 mese when broken digged",
+	description = "1st Most Expensive Block -- Drops 40 diamonds",
 	tiles = {"1stexpensive_block.jpg"}, 
 	groups = {cracky=3},
-	drop = "default:diamond 40, default:mese 4",
+	drop = "default:diamond 40",
 	sounds = default.node_sound_wood_defaults(),	
 })
 -- 1st Most Expensive Block Craft
